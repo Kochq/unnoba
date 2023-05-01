@@ -8,10 +8,10 @@ for i in range(cantNum):
     if nuevoNum >= 0:
         suma += nuevoNum
         if nuevoNum % 2:
-            impares += 1
+            impares += nuevoNum
         else:
-            pares += 1
+            pares += nuevoNum
 
 print(f'La suma total es {suma}')
-print(f'Hay {pares} numeros pares')
-print(f'Hay {impares} numeros impares')
+print(f'La suma total de los impares es {impares}')
+print(f'La suma total de los pares es {pares}')
