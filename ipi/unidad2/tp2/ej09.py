@@ -8,9 +8,9 @@ for i in range(cantNum):
     if nuevoNum >= 0:
         suma += nuevoNum
         if nuevoNum % 2:
-            impares += 1
+            impares += nuevoNum
         else:
-            pares += 1
+            pares += nuevoNum
 
 print(f'La suma total es {suma}')
 print(f'Hay {pares} numeros pares')
