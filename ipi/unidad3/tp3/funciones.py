@@ -25,3 +25,26 @@ def mostrar_suma_digitos(numero):
 def maximo(num_1, num_2):
     if num_1 > num_2: return num_1
     else: return num_2
+
+#8)
+def usuario(nombre):
+    completo = nombre.replace(' ', '').replace(',', '')
+    return completo
+
+def contrasenia_por_defecto(dni):
+    ultimos4 = dni[4::]
+    return ultimos4
+
+#10)
+def titulo(cadena):
+    nuevaCadena = ''
+    if cadena.isalpha():
+        palabras = cadena.split(' ')
+
+        for p in palabras:
+            nuevaP = p.replace(p[0], p[0].upper(), 1) #Reemplaza el primer caracter de la palabra por su mayuscula, una sola vez
+            nuevaCadena+= nuevaP + ' '
+    else:
+        return 1 #Mal
+
+    return nuevaCadena
