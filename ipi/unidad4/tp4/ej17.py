@@ -11,11 +11,11 @@ numero = int(input('Ingresa un numero porfis uwu?: '))
 while digitos_repetidos(numero) == []:
     numero = int(input('Ingresa un numero porfis uwu?: '))
 
-array = suma_digitos(digitos_repetidos(numero))
+lista = digitos_repetidos(numero)
 
 #a)
-print(array)
+print(lista)
 #b)
-print(f'Se repiten {len(array)} digitos')
+print(f'Se repiten {len(lista)} digitos')
 #c y d)
 #Que paja
