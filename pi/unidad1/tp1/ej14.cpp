@@ -7,7 +7,7 @@ int main() {
     std::string palabra;
 
     std::cout << "Ingrese una palabra: ";
-    std::getline(std::cin, palabra);
+    std::cin >> palabra;
 
     if (esPalindromo(palabra)) std::cout << "La palabra es un palíndromo.";
     else std::cout << "La palabra no es un palíndromo.";
