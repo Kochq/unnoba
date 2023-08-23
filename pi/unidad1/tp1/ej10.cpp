@@ -4,6 +4,7 @@ void casoA();
 void casoB();
 void casoC();
 void casoD();
+//Esto es por comodidad, si no tendria que definir todas las funciones aca y la main me quedaria abajo :p
 
 int main() {
   char dato;
