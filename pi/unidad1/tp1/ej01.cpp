@@ -6,4 +6,6 @@ int main() {
 
     if(i % 5 == 0) std::cout << std::endl;
   }
+
+  return 0;
 }
