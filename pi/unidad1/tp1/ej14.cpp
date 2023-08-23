@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-bool esPalindromo(const std::string &palabra);
+bool esPalindromo(const std::string palabra);
 
 int main() {
     std::string palabra;
@@ -15,7 +15,7 @@ int main() {
     return 0;
 }
 
-bool esPalindromo(const std::string &palabra) {
+bool esPalindromo(const std::string palabra) {
     int inicio = 0;
     int fin = palabra.length() - 1;
 
