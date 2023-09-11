@@ -3,9 +3,7 @@
 #include <string>
 
 struct invitado { //Si la estructura no es global la funcion eliminarInv no sabe que existe 
-  std::string nombre;
-  std::string apellido;
-  std::string sexo;
+  std::string nombre, apellido, sexo;
   short edad;
 };
 

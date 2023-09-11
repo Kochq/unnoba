@@ -6,9 +6,7 @@ int main() {
   const short MAX = 500;
   short cantLibros = 0;
   struct libro {
-    std::string titulo;
-    std::string autor;
-    std::string editorial;
+    std::string titulo, autor, editorial;
     short cantHojas;
     int isbn;
   };
