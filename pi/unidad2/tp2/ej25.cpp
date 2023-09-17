@@ -8,15 +8,18 @@ struct cliente {
   int dni = 0;
   int cumple = 0;
   int total = 0; 
+
+  //Constructor (funcion que asigna los valores directamente, asi no hace falta hacer clientes[i].nombre = "Mateo"... etc)
+  cliente(std::string& n, std::string& a, std::string& e, int& d, int& c, int& t) 
+    : nombre(n), apellido(a), email(e), dni(d), cumple(c), total(t) {}
+  //Contructor vacio (para inicializar el array)
+  cliente() : nombre(""), apellido(""), email(""), dni(0), cumple(0), total(0) {}
 };
 
 void carga(struct cliente *clientes, short &cantClientes) {
-  std::string nombreTemp; 
-  std::string apellidoTemp = ""; 
-  std::string emailTemp = "";
-  int dniTemp;
-  int cumpleTemp = 0;
-  int totalTemp = 0;
+  std::string nombreTemp = ""; std::string apellidoTemp = ""; std::string emailTemp = "";
+  int dniTemp; int cumpleTemp = 0; int totalTemp = 0;
+
   while (nombreTemp != "z") {
     std::cout << "Ingrese el nombre del cliente: ";
     std::getline(std::cin>>std::ws, nombreTemp);
@@ -36,41 +39,28 @@ void carga(struct cliente *clientes, short &cantClientes) {
 
     std::cout << "Ingrese el monto total del cliente: ";
     std::cin >> totalTemp;
+
     if(cantClientes == 0) {
-      clientes[0].nombre = nombreTemp;
-      clientes[0].apellido = apellidoTemp;
-      clientes[0].email = emailTemp;
-      clientes[0].dni = dniTemp;
-      clientes[0].cumple = cumpleTemp;
-      clientes[0].total = totalTemp;
+      clientes[0] = cliente(nombreTemp, apellidoTemp, emailTemp, dniTemp, cumpleTemp, totalTemp);
     } 
-    else{
+    else {
       for(short i = 0; i < cantClientes; i++){ 
         if(clientes[i].dni > dniTemp) {
           for(short j = cantClientes; j >= i; j--) {
-            clientes[j+1].nombre = clientes[j].nombre;
-            clientes[j+1].apellido = clientes[j].apellido;
-            clientes[j+1].email = clientes[j].email;
-            clientes[j+1].dni = clientes[j].dni;
-            clientes[j+1].cumple = clientes[j].cumple;
-            clientes[j+1].total = clientes[j].total;
+            clientes[j+1] = cliente(
+                clientes[j].nombre, 
+                clientes[j].apellido, 
+                clientes[j].email, 
+                clientes[j].dni, 
+                clientes[j].cumple, 
+                clientes[j].total
+                );
           }
-          clientes[i].nombre = nombreTemp;
-          clientes[i].apellido = apellidoTemp;
-          clientes[i].email = emailTemp;
-          clientes[i].dni = dniTemp;
-          clientes[i].cumple = cumpleTemp;
-          clientes[i].total = totalTemp;
+
+          clientes[i] = cliente(nombreTemp, apellidoTemp, emailTemp, dniTemp, cumpleTemp, totalTemp);
           break;
         }
-        else {
-          clientes[cantClientes].nombre = nombreTemp;
-          clientes[cantClientes].apellido = apellidoTemp;
-          clientes[cantClientes].email = emailTemp;
-          clientes[cantClientes].dni = dniTemp;
-          clientes[cantClientes].cumple = cumpleTemp;
-          clientes[cantClientes].total = totalTemp;
-        }
+        else clientes[cantClientes] = cliente(nombreTemp, apellidoTemp, emailTemp, dniTemp, cumpleTemp, totalTemp);
       } 
     }
     cantClientes++;
@@ -78,10 +68,10 @@ void carga(struct cliente *clientes, short &cantClientes) {
 }
 
 int main() {
-  const short MAX = 100;
   short cantClientes = 0;
-  cliente clientes[MAX];
+  const short MAX = 100;
   short meses[13] = {0};
+  cliente clientes[MAX];
 
   //A)
   carga(clientes, cantClientes);
