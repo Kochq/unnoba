@@ -6,6 +6,11 @@ int main() {
   int socios[MAX];
   char dato;
 
+  void casoA(int *socios, short &cantSocios, const short MAX);
+  void casoB(int *socios, short cantSocios);
+  void casoC(int *socios, short &cantSocios);
+  void casoD(int *socios, short cantSocios);
+
   do {
     std::cout << "'A': Ingresar DNI." << std::endl;
     std::cout << "'B': Buscar DNI." << std::endl;
@@ -17,85 +22,86 @@ int main() {
     std::cin >> dato;
 
     switch (dato) {
-      case 'A':
-        {
-          if (cantSocios < MAX) {
-            std::cout << "Ingrese el numero de documento del nuevo socio: ";
-            std::cin >> socios[cantSocios];
-            cantSocios++;
-          } 
-          else std::cout << "Limite de usuarios alcanzado" << std::endl;
-          break;
-        }
-      case 'B':
-        {
-          bool encontrado = 0;
-          int dni;
-          std::cout << "Ingrese el numero de documento que quiere buscar: ";
-          std::cin >> dni;
-
-          for(int i=0; i<cantSocios; i++) {
-            if (socios[i] == dni) {
-              encontrado = 1;
-              std::cout << "Cuota al dia" << std::endl;
-            }
-          }
-
-          if(!encontrado) std::cout << "Socio con deuda" << std::endl;
-          break;
-        }
-      case 'C':
-        {
-          bool encontrado = 0;
-          int dni;
-
-          std::cout << "Ingrese el numero de documento que quiere eliminar: ";
-          std::cin >> dni;
-
-          for (int i = 0; i < cantSocios; i++) {
-            if (socios[i] == dni) {
-              encontrado = 1;
-
-              for (int j = i; j < cantSocios - 1; j++) {
-                socios[j] = socios[j + 1];
-              }
-
-              cantSocios--;
-
-              std::cout << "DNI eliminado correctamente" << std::endl;
-              break;
-            }
-          }
-
-          if (!encontrado) std::cout << "El DNI no fue encontrado en la lista" << std::endl;
-          break;
-        }
-      case 'D':
-        {
-          for(int i=0; i<cantSocios; i++) {
-            std::cout << "Socio: " << socios[i] << std::endl;
-          } 
-          break;
-        }
+      case 'A': {
+        casoA(socios, cantSocios, MAX);
+        break;
+      }
+      case 'B': { 
+        casoB(socios, cantSocios);
+        break;
+      }
+      case 'C': {
+        casoC(socios, cantSocios);
+        break;
+      }
+      case 'D': {
+        casoD(socios, cantSocios);
+        break;
+      }
       case 'Q':
         std::cout << "Chau";
         break;
       default:
         std::cout << "Opcion incorrecta, vuelva a intentarlo" << std::endl;
-        break;
     }
   }while (dato != 'Q');
 
   return 0;
 }
-
-void casoB(int socios[], short cantSocios) {
+void casoA(int *socios, short &cantSocios, const short MAX) {
+  if (cantSocios < MAX) {
+    std::cout << "Ingrese el numero de documento del nuevo socio: ";
+    std::cin >> socios[cantSocios];
+    cantSocios++;
+  } 
+  else std::cout << "Limite de usuarios alcanzado" << std::endl;
 }
 
-void casoC(int socios[], short cantSocios) {
+void casoB(int *socios, short cantSocios) {
+  bool encontrado = 0;
+  int dni;
+  std::cout << "Ingrese el numero de documento que quiere buscar: ";
+  std::cin >> dni;
+
+  for(int i=0; i<cantSocios; i++) {
+    if (socios[i] == dni) {
+      encontrado = 1;
+      std::cout << "Cuota al dia" << std::endl;
+    }
+  }
+
+  if(!encontrado) std::cout << "Socio con deuda" << std::endl;
 }
 
-void casoD(int socios[], short cantSocios){
+void casoC(int *socios, short &cantSocios) {
+  bool encontrado = 0;
+  int dni;
+
+  std::cout << "Ingrese el numero de documento que quiere eliminar: ";
+  std::cin >> dni;
+
+  for (int i = 0; i < cantSocios; i++) {
+    if (socios[i] == dni) {
+      encontrado = 1;
+
+      for (int j = i; j < cantSocios - 1; j++) {
+        socios[j] = socios[j + 1];
+      }
+
+      cantSocios--;
+
+      std::cout << "DNI eliminado correctamente" << std::endl;
+      break;
+    }
+  }
+
+  if (!encontrado) std::cout << "El DNI no fue encontrado en la lista" << std::endl;
+}
+
+void casoD(int *socios, short cantSocios){
+  for(int i=0; i<cantSocios; i++) {
+    std::cout << "Socio: " << socios[i] << std::endl;
+  } 
 }
 
 void casoQ() {
