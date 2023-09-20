@@ -8,15 +8,9 @@ struct cliente {
   int dni = 0;
   int cumple = 0;
   int total = 0; 
-
-  //Constructor (funcion que asigna los valores directamente, asi no hace falta hacer clientes[i].nombre = "Mateo"... etc)
-  cliente(std::string& n, std::string& a, std::string& e, int& d, int& c, int& t) 
-    : nombre(n), apellido(a), email(e), dni(d), cumple(c), total(t) {}
-  //Contructor vacio (para inicializar el array)
-  cliente() : nombre(""), apellido(""), email(""), dni(0), cumple(0), total(0) {}
 };
 
-void carga(struct cliente *clientes, short &cantClientes) {
+void carga(cliente clientes[], short &cantClientes) {
   std::string nombreTemp = ""; std::string apellidoTemp = ""; std::string emailTemp = "";
   int dniTemp; int cumpleTemp = 0; int totalTemp = 0;
 
@@ -41,26 +35,26 @@ void carga(struct cliente *clientes, short &cantClientes) {
     std::cin >> totalTemp;
 
     if(cantClientes == 0) {
-      clientes[0] = cliente(nombreTemp, apellidoTemp, emailTemp, dniTemp, cumpleTemp, totalTemp);
+      clientes[0] = {nombreTemp, apellidoTemp, emailTemp, dniTemp, cumpleTemp, totalTemp};
     } 
     else {
       for(short i = 0; i < cantClientes; i++){ 
         if(clientes[i].dni > dniTemp) {
           for(short j = cantClientes; j >= i; j--) {
-            clientes[j+1] = cliente(
-                clientes[j].nombre, 
-                clientes[j].apellido, 
-                clientes[j].email, 
-                clientes[j].dni, 
-                clientes[j].cumple, 
-                clientes[j].total
-                );
+            clientes[j+1] = {
+              clientes[j].nombre, 
+              clientes[j].apellido, 
+              clientes[j].email, 
+              clientes[j].dni, 
+              clientes[j].cumple, 
+              clientes[j].total
+            };
           }
 
-          clientes[i] = cliente(nombreTemp, apellidoTemp, emailTemp, dniTemp, cumpleTemp, totalTemp);
+          clientes[i] = {nombreTemp, apellidoTemp, emailTemp, dniTemp, cumpleTemp, totalTemp};
           break;
         }
-        else clientes[cantClientes] = cliente(nombreTemp, apellidoTemp, emailTemp, dniTemp, cumpleTemp, totalTemp);
+        else clientes[cantClientes] = {nombreTemp, apellidoTemp, emailTemp, dniTemp, cumpleTemp, totalTemp};
       } 
     }
     cantClientes++;

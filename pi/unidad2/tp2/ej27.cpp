@@ -12,10 +12,6 @@ using std::toupper;
 struct concursante {
   string nombre1, nombre2, cancion;
   int numInsc;
-
-  //Constructors
-  concursante(string n1, string n2, string c, int n) : nombre1(n1), nombre2(n2), cancion(c), numInsc(n) {};
-  concursante() : nombre1(""), nombre2(""), cancion(""), numInsc(0) {};
 };
 
 struct musica {
@@ -24,11 +20,11 @@ struct musica {
 };
 
 string formatearCancion(string cancion);
-void cargaConcursantes(struct concursante *concursantes, short &cantConcursantes);
-void cargarCanciones(struct musica *canciones, short &cantCanciones);
-void parejasMayorDuracion(struct concursante concursantes[], short cantConcursantes, struct musica canciones[], short cantCanciones);
-void eliminarCancion(struct concursante concursantes[], short cantConcursantes, struct musica *canciones, short &cantCanciones);
-void duracionCancion(struct concursante concursantes[], short cantConcursantes, struct musica canciones[], short cantCanciones);
+void cargaConcursantes(concursante concursantes[], short &cantConcursantes);
+void cargarCanciones(musica canciones[], short &cantCanciones);
+void parejasMayorDuracion(concursante concursantes[], short cantConcursantes, musica canciones[], short cantCanciones);
+void eliminarCancion(concursante concursantes[], short cantConcursantes, musica canciones[], short &cantCanciones);
+void duracionCancion(concursante concursantes[], short cantConcursantes, musica canciones[], short cantCanciones);
 
 int main() {
   const short MAX = 40;
@@ -82,7 +78,7 @@ int main() {
 }
 
 //a) mezcla entre el 25 y el 26
-void cargaConcursantes(struct concursante *concursantes, short &cantConcursantes) {
+void cargaConcursantes(concursante concursantes[], short &cantConcursantes) {
   char opcionEmp;
 
   do {
@@ -103,22 +99,22 @@ void cargaConcursantes(struct concursante *concursantes, short &cantConcursantes
 
     cancionFTemp = formatearCancion(cancionTemp);
 
-    if(cantConcursantes == 0) concursantes[0] = concursante(nombre1Temp, nombre2Temp, cancionFTemp, numInscTemp);
+    if(cantConcursantes == 0) concursantes[0] = {nombre1Temp, nombre2Temp, cancionFTemp, numInscTemp};
     else {
       for(short i = 0; i < cantConcursantes; i++){ 
         if(concursantes[i].numInsc > numInscTemp) {
           for(short j = cantConcursantes; j >= i; j--) {
-            concursantes[j+1] = concursante(
-                concursantes[j].nombre1, 
-                concursantes[j].nombre2, 
-                concursantes[j].cancion, 
-                concursantes[j].numInsc
-                );
+            concursantes[j+1] = {
+              concursantes[j].nombre1, 
+              concursantes[j].nombre2, 
+              concursantes[j].cancion, 
+              concursantes[j].numInsc
+            };
           }
-          concursantes[i] = concursante(nombre1Temp, nombre2Temp, cancionFTemp, numInscTemp);
+          concursantes[i] = {nombre1Temp, nombre2Temp, cancionFTemp, numInscTemp};
           break;
         }
-        else concursantes[cantConcursantes] = concursante(nombre1Temp, nombre2Temp, cancionFTemp, numInscTemp);
+        else concursantes[cantConcursantes] = {nombre1Temp, nombre2Temp, cancionFTemp, numInscTemp}; 
       }
     }
     cantConcursantes++;
@@ -129,7 +125,7 @@ void cargaConcursantes(struct concursante *concursantes, short &cantConcursantes
 }
 
 //b)
-void cargarCanciones(struct musica *canciones, short &cantCanciones) {
+void cargarCanciones(musica canciones[], short &cantCanciones) {
   char opcionEmp;
 
   do {
@@ -161,7 +157,7 @@ string formatearCancion(string cancion) {
 }
 
 //e)
-void duracionCancion(struct concursante concursantes[], short cantConcursantes, struct musica canciones[], short cantCanciones) {
+void duracionCancion(concursante concursantes[], short cantConcursantes, musica canciones[], short cantCanciones) {
   int parejaBuscada, tiempoEncontrado, duracionCancion;
   cout << "Ingrese el numero de la pareja: ";
   cin >> parejaBuscada;
@@ -182,7 +178,7 @@ void duracionCancion(struct concursante concursantes[], short cantConcursantes, 
 }
 
 //c) podria usar la funcion de arriba para hacer este punto, pero usaria 3 for en vez de 2... Tambien podria pensar otra forma de hacer la funcion de arriba
-void parejasMayorDuracion(struct concursante concursantes[], short cantConcursantes, struct musica canciones[], short cantCanciones) {
+void parejasMayorDuracion(concursante concursantes[], short cantConcursantes, musica canciones[], short cantCanciones) {
   int mayor = canciones[0].duracion;
   string tituloMayor = canciones[0].titulo;
 
@@ -203,7 +199,7 @@ void parejasMayorDuracion(struct concursante concursantes[], short cantConcursan
   }
 }
 
-void eliminarCancion(struct concursante concursantes[], short cantConcursantes, struct musica *canciones, short &cantCanciones) {
+void eliminarCancion(concursante concursantes[], short cantConcursantes, musica canciones[], short &cantCanciones) {
   string cancionEliminar;
   cout << "Ingrese la cancion a eliminar: ";
   getline(cin>>ws, cancionEliminar);

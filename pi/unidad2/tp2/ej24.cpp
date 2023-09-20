@@ -8,7 +8,7 @@ struct ciudadano {
   char sexo;
 };
 
-void cargarCiudadano(struct ciudadano *ciudadanos, short &cantCiudadanos) {
+void cargarCiudadano(ciudadano ciudadanos[], short &cantCiudadanos) {
   short tipoDNI;
 
   do {
@@ -41,7 +41,7 @@ void cargarCiudadano(struct ciudadano *ciudadanos, short &cantCiudadanos) {
   }while (ciudadanos[cantCiudadanos-1].nombre != "Pepe" || ciudadanos[cantCiudadanos-1].apellido != "Argento");
 }
 
-void mostrarRegistro(struct ciudadano ciudadanos[], short cantCiudadanos) {
+void mostrarRegistro(ciudadano ciudadanos[], short cantCiudadanos) {
   for (int i=0; i<cantCiudadanos; i++) {
     long fechaResto = ciudadanos[i].fechaNacimiento % 10000;
     long año = ciudadanos[i].fechaNacimiento / 10000;
@@ -60,7 +60,7 @@ void mostrarRegistro(struct ciudadano ciudadanos[], short cantCiudadanos) {
   }
 }
 
-void registroPorSexo(struct ciudadano ciudadanos[], short cantCiudadanos, char sexo) {
+void registroPorSexo(ciudadano ciudadanos[], short cantCiudadanos, char sexo) {
   ciudadano ciudadanosS[5000];
   short cantCiudadanosS = 0;
 

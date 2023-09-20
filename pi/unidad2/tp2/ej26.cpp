@@ -16,10 +16,10 @@ struct sucursal {
   string nombre, legajo;
 };
 
-string buscarLegajo(struct empleado empleados[], short cantEmpleados, string legajoBuscado);
-void listarSucursales(struct sucursal sucursales[], short cantSucursales, struct empleado empleados[], short cantEmpleados);
-void cargaSucursales(struct sucursal *sucursales, short &cantSucursales, struct empleado empleados[], short cantEmpleados);
-void cargaEmpleados(struct empleado *empleados, short &cantEmpleados);
+string buscarLegajo(empleado empleados[], short cantEmpleados, string legajoBuscado);
+void listarSucursales(sucursal sucursales[], short cantSucursales, empleado empleados[], short cantEmpleados);
+void cargaSucursales(sucursal sucursales[], short &cantSucursales, empleado empleados[], short cantEmpleados);
+void cargaEmpleados(empleado empleados[], short &cantEmpleados);
 
 int main() {
   const short MAX_EMPLEADOS = 2000;
@@ -73,7 +73,7 @@ int main() {
   return 0;
 }
 
-void cargaEmpleados(struct empleado *empleados, short &cantEmpleados) {
+void cargaEmpleados(empleado empleados[], short &cantEmpleados) {
   char opcionEmp;
 
   do {
@@ -94,12 +94,12 @@ void cargaEmpleados(struct empleado *empleados, short &cantEmpleados) {
   }while (opcionEmp != 'N' && opcionEmp != 'n');
 }
 
-string buscarLegajo(struct empleado empleados[], short cantEmpleados, string legajoBuscado) {
+string buscarLegajo(empleado empleados[], short cantEmpleados, string legajoBuscado) {
   for(short i = 0; i < cantEmpleados; i++) if(empleados[i].legajo == legajoBuscado) return empleados[i].nombre;
   return "";
 }
 
-void cargaSucursales(struct sucursal *sucursales, short &cantSucursales, struct empleado empleados[], short cantEmpleados) {
+void cargaSucursales(sucursal sucursales[], short &cantSucursales, struct empleado empleados[], short cantEmpleados) {
   char opcionSuc;
   string legajoTemp, nombreTemp;
   bool legajoEncontrado;
@@ -118,8 +118,7 @@ void cargaSucursales(struct sucursal *sucursales, short &cantSucursales, struct 
       if(!legajoEncontrado) cout << "El encargado no se encuentra en la lista de empleados, ingrese un encargado valido" << std::endl;
     }while (!legajoEncontrado);
 
-    sucursales[cantSucursales].nombre = nombreTemp;
-    sucursales[cantSucursales].legajo = legajoTemp;
+    sucursales[cantSucursales] = {nombreTemp, legajoTemp};
     cantSucursales++;
     cout << "Sucursal cargada correctamente" << std::endl;
     cout << "¿Desea cargar otra usuario? (S/n)";
@@ -128,7 +127,7 @@ void cargaSucursales(struct sucursal *sucursales, short &cantSucursales, struct 
   }while (opcionSuc != 'N' && opcionSuc != 'n');
 }
 
-void listarSucursales(struct sucursal sucursales[], short cantSucursales, struct empleado empleados[], short cantEmpleados) {
+void listarSucursales(sucursal sucursales[], short cantSucursales, struct empleado empleados[], short cantEmpleados) {
   cout << "===== LISTADO DE SUCURSALES =====" << std::endl;
   for(short i = 0; i < cantSucursales; i++) {
     cout << "Nombre: " << sucursales[i].nombre << std::endl;
