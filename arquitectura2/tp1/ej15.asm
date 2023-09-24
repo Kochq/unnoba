@@ -3,31 +3,35 @@
   caracter DB "4"
 .CODE
   inicio:
-  mov ax, @data
-  mov ds, ax
+  MOV AX, @data
+  MOV DS, AX
 
-  mov al, caracter
-  call caracterDecimal
+  MOV AL, caracter
+  CALL caracterDecimal
 
-  mov ax, 4C00h
-  int 21h
+  MOV AX, 4C00h
+  INT 21h
 
-  caracterDecimal proc
+  caracterDecimal PROC
 
-  mov bx, offset validos
-  mov cx, 9
-  mov dl, 0
+  MOV BX, OFFSET validos ; Direccion de memoria del array
+  MOV CX, 9 ; Cantidad de numeros que hay
+  MOV DL, 0
 
   iterar:         
-  mov si, cx
-  mov dl, ds:[bx - si]
-  cmp dl, caracter
-  je valido
-  loop iterar
+  MOV SI, CX ; Muevo el contado a si para poder usarlo dentro del ds
+  MOV DL, DS:[BX - SI] ; Muevo a dl uno de los caracteres validos
+  CMP DL, caracter ; Comparo con el mio
+  JE valido ; Si coinciden, es un digito
+  LOOP iterar
 
-  mov ah, 0FFh
-  caracterDecimal endp
-
+  MOV AH, 0FFh ; No es un digito
+  RET
+  
   valido:
-  mov ah, cl
+  MOV AH, CL ; Es un digito
+  RET    
+  
+  caracterDecimal ENDP
+
 END inicio
