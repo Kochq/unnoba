@@ -33,10 +33,14 @@ using namespace std;
 
 struct jugador {
   string nombre;
-  int puntaje; 
+  int puntaje = 0; 
   int oportunidades = 5;
 };
-const int MAXJUGADORES = 10;
+const int MAXJUGADORES = 5;
+
+struct jugada {
+  int fila, columna;
+};
 
 // Funcion que devuelve true si la casilla que intenta ingresar el usuario esta libre
 bool casillaLibre(const int fila, const int columna, bool tablero[5][5]) {
@@ -107,8 +111,12 @@ void jugar(int &fila, int &columna, bool tablero[5][5], jugador jugadores[], con
   // Variable que determina si la posicion esta en rango del tablero o no
   bool enRango = false;
 
+  jugada jugadas[5] = {0,0};
+
   do {
     do {
+      int oportunidades = jugadores[cantJugadores].oportunidades;
+
       cout << "Ingrese la fila (0-4) donde quiere disparar: ";
       cin >> fila;
       cout << "Ingrese la columna (0-4) donde quiere disparar: ";
@@ -122,12 +130,17 @@ void jugar(int &fila, int &columna, bool tablero[5][5], jugador jugadores[], con
 
         // Si esta ocupada sumamos al puntaje del jugador
         if(!libre) {
-          cout << "Pegaste" << endl;
-          jugadores[cantJugadores].puntaje++;
+          for(int i = 0; i<5; i++) {
+            if(jugadas[i].columna == columna && jugadas[i].fila == fila) cout << "No pegaste :(" << endl;
+            else {
+              cout << "Pegaste" << endl;
+              jugadores[cantJugadores].puntaje++; 
+              jugadas[oportunidades].fila = fila;
+              jugadas[oportunidades].columna = columna;
+            }
+          }
         }
-        else {
-          cout << "No pegaste :(" << endl;
-        }
+        else cout << "No pegaste :(" << endl;
       }
       else cout << "Datos fuera del rango del tablero, intente nuevamente" << endl;
 
@@ -219,7 +232,7 @@ void menuOpciones(bool tablero[5][5], int cantBarcos, jugador jugadores[], int c
 
 int main() {
   //Cantidad de barcos por colocar en el tablero
-  int cantBarcos = 10;
+  int cantBarcos = 5;
   // Tablero de booleanos inicializados en false, false = no ocupado | true = ocupado
   bool tablero[5][5] = {false};
   int cantJugadores = 0;
