@@ -2,6 +2,7 @@
 #include <string>
 
 struct Node {
+  // Tambien podriamos crear un struct y asignarle ese objeto
   float precio = 0;
   int codigo = 0, stock = 0;
   std::string descripcion = "";
@@ -91,6 +92,7 @@ void imprimirLista(Node* head) {
 void incrementarPrecios(Node* head, float porcentaje) {
   Node* tNode = head;
 
+  // Recorremos la lista y aplicamos el cambio a todos los nodos
   while(tNode != nullptr) {
     tNode->precio += (tNode->precio / 100) * porcentaje;
     tNode = tNode->next;
@@ -100,7 +102,9 @@ void incrementarPrecios(Node* head, float porcentaje) {
 bool incrementarStock(Node* head, int codigo, int stockAumentar) {
   Node* tNode = head;
 
+  // Recorremos la lista
   while(tNode != nullptr) {
+    // Aplicamos el cambio solo al nodo que coincide con el codigo
     if(tNode->codigo == codigo) {
       tNode->stock += stockAumentar;
       return true;
@@ -124,10 +128,13 @@ void eliminarNodo(Node*& nodoAnt, Node*& nodoEliminar) {
 void eliminarNoStock(Node*& head) {
   Node* tNode = head;
 
+  // Comprobamos que el primer elemento no tenga stock 0
   while(head->stock == 0) {
     head = head->next;
   }tNode = head;
 
+  // A partir de ahora comprobamos que el siguiente elemento no tenga stock 0 
+  // Sabemos que el actual no tiene stock 0 por lo anterior
   while(tNode != nullptr && tNode->next != nullptr) {
     if(tNode->next->stock == 0) eliminarNodo(tNode, tNode->next);
     else tNode = tNode->next;
