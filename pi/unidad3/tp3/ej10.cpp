@@ -73,9 +73,8 @@ void listaRepetida(Node*& headTodas, Node*& headRepetidas) {
 }
 
 void mostrarLista(Node* head) {
-  Node* t = head;
-  while(t != nullptr) {
-    std::cout << "Dato: " << t->dato << std::endl;
-    t = t->next;
+  while(head != nullptr) {
+    std::cout << "Dato: " << head->dato << std::endl;
+    head = head->next;
   }
 }

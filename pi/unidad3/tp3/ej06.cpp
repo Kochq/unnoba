@@ -62,11 +62,9 @@ bool eliminarJosefina(Node*& head) {
 }
 
 void mostrarAlumnos(Node* head) {
-  Node* t = head;
-
-  while(t != nullptr) {
-    std::cout << t->nombre << std::endl;
-    t = t->next;
+  while(head != nullptr) {
+    std::cout << head->nombre << std::endl;
+    head = head->next;
   }
 }
 

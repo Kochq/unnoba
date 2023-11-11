@@ -78,14 +78,13 @@ void pedirDatos(Node*& head) {
 }
 
 void imprimirLista(Node* head) {
-  Node* t = head;
-  while(t != nullptr) {
+  while(head != nullptr) {
     std::cout << "===== Nuevo Item =====" << std::endl;
-    std::cout << "Codigo: " << t->codigo << std::endl;
-    std::cout << "Precio: " << t->precio << std::endl;
-    std::cout << "Stock: " << t->stock << std::endl;
-    std::cout << "Descripcion: " << t->descripcion << std::endl;
-    t = t->next;
+    std::cout << "Codigo: " << head->codigo << std::endl;
+    std::cout << "Precio: " << head->precio << std::endl;
+    std::cout << "Stock: " << head->stock << std::endl;
+    std::cout << "Descripcion: " << head->descripcion << std::endl;
+    head = head->next;
   }
 }
 

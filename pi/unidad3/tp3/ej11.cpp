@@ -27,11 +27,10 @@ int main() {
 }
 
 void imprimirLista(Node* head) {
-    Node* nodoActual = head;
-    while (nodoActual != nullptr) {
-        std::cout << nodoActual->dato << std::endl;
-        nodoActual = nodoActual->next;
-    }
+  while (head != nullptr) {
+    std::cout << head->dato << std::endl;
+    head = head->next;
+  }
 }
 
 Node* merge(Node*& lista1, Node*& lista2) {
