@@ -12,4 +12,4 @@ Repositorio con todo el codigo escrito para la carrera de ***Ingenieria Informat
   * [Arquitectura II (ASM)](arquitectura2)
     * [Tp1 (Memoria)](arquitectura2/tp1) | [Tp2 (Interrupciones)](arquitectura2/tp2) | [Tp3 (PIC)](arquitectura2/tp3) | [Tp4 (Circuitos)](arquitectura2/tp4)
   * [Programación imperativa (C++)](pi)
-    * [Tp1 (C++)](pi/unidad1/tp1) | [Tp2 (Array/Matrices)](pi/unidad2/tp2) | [Tp3 (Listas Enlazadas)](pi/unidad3/tp3) | [Tp4 (Recursividad)](pi/unidad4/tp4)
+    * [Tp1 (C++)](pi/unidad1/tp1) | [Tp2 (Matrices/Structs)](pi/unidad2/tp2) | [Tp3 (Listas Enlazadas)](pi/unidad3/tp3) | [Tp4 (Recursividad)](pi/unidad4/tp4)
