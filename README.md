@@ -2,6 +2,8 @@
 
 Repositorio con todo el codigo escrito para la carrera de ***Ingenieria Informatica*** en la Unnoba
 
+![Plan de estudios](https://github.com/kochq/unnoba/blob/main/assets/img/planEstudios.png?raw=true)
+
 * Ingreso
   * [Introduccion a los algoritmos (Python)](algoritmos)
 * 1er Año | 1er Cuatrimestre
