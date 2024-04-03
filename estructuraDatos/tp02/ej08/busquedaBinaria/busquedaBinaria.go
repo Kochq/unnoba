@@ -3,6 +3,7 @@ package busquedabinaria
 import "fmt"
 
 func printLista(arr []int, hi int, lo int, mid int) {
+    fmt.Printf("\n")
     for _, value := range arr {
         fmt.Printf("%d ", value)
     }
@@ -29,6 +30,24 @@ func printLista(arr []int, hi int, lo int, mid int) {
         }
     }
     fmt.Printf("\n\n")
+}
+
+func Recursiva(arr []int, buscado int, lo int, hi int, mid int) int {
+    mid = (lo + hi) / 2
+
+    if(lo >= hi) {
+        return -1
+    }
+
+    printLista(arr, hi, lo, mid)
+
+    if(arr[mid] == buscado) {
+        return mid+1
+    } else if(arr[mid] > buscado) {
+        return Recursiva(arr, buscado, lo, mid, mid)
+    } else {
+        return Recursiva(arr, buscado, mid+1, hi, mid)
+    }
 }
 
 func Iterativa(arr []int, buscado int) int {
