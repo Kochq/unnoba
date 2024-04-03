@@ -6,9 +6,6 @@ func Recursiva(arreglo []int, mayor int, index int) int {
     }
 
     coso := arreglo[index]
-    if index == len(arreglo) {
-        return mayor
-    }
 
     if coso > mayor {
         mayor = coso
