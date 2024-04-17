@@ -3,27 +3,35 @@ package tp02;
 public class Contador {
     private int contador;
 
+    public int getContador() {
+		return contador;
+	}
+	public void setContador(int contador) {
+		this.contador = contador;
+	}
+
     public void iniciar() {
-        this.contador = 0;
+        setContador(0);
     }
     public void iniciar(int n) {
-        this.contador = n;
+        setContador(n);
     }
     public void sumar(int n) {
-        this.contador += n;
+        setContador(getContador() + n);
     }
     public void sumar() {
-        this.contador++;
+        setContador(getContador() + 1);
     }
     public void restar(int n) {
-        this.contador -= n;
+        setContador(getContador() - n);
     }
     public void restar() {
-        this.contador--;
+        setContador(getContador() - 1);
     }
     public void imprimir(){
-        System.out.println("Valor del contador: " + this.contador);
+        System.out.println("Valor del contador: " + getContador());
     }
+
     public static void main(String[] args){
         Contador contador = new Contador();
 
