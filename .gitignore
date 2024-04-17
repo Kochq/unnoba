@@ -1,3 +1,5 @@
 *.exe
 a.out
 .vscode
+*.ctxt
+*.class
