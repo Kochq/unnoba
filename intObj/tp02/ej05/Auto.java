@@ -1,6 +1,7 @@
 public class Auto {
     private double velocidad;
-    private Ruedas ruedas;
+    private boolean encendido;
+	private Ruedas ruedas;
     private Luces luces;
     private Baul baul;
     private Motor motor;
@@ -15,6 +16,14 @@ public class Auto {
         setBaul(baul);
         setMotor(motor);
     }
+
+    public boolean isEncendido() {
+		return encendido;
+	}
+	public void setEncendido(boolean encendido) {
+		this.encendido = encendido;
+	}
+
 
     public Ruedas getRuedas() {
         return ruedas;
@@ -54,10 +63,12 @@ public class Auto {
     public void encender() {
         getMotor().encender();
         getRuedas().encender(getMotor().getRpm());
+        this.setEncendido(true);
     }
     public void apagar() {
         getMotor().apagar();
         getRuedas().apagar();
+        this.setEncendido(false);
     }
 
     public void abrirBaul() {
@@ -72,6 +83,8 @@ public class Auto {
         getRuedas().setVelocidad(getMotor().getRpm());
 
         setVelocidad(getRuedas().getVelocidad());
+
+        System.out.println("Rummmm");
     }
     public void desAcelerar() {
         getMotor().setRpm(getMotor().getRpm() - 1);
@@ -86,5 +99,4 @@ public class Auto {
     public void apagarLuces() {
         getLuces().apagar();
     }
-
 }
