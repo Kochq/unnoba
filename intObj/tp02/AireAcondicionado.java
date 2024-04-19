@@ -1,3 +1,5 @@
+package tp02;
+
 public class AireAcondicionado {
     private float temp;
     private boolean encendido;
