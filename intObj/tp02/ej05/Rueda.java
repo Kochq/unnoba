@@ -1,8 +1,15 @@
 public class Rueda {
     private boolean girando;
     private int rpm;
-    private float velocidad;
+    private double velocidad;
     private int radio;
+
+    public Rueda(int radio) {
+        setRpm(0);
+        setRadio(radio);
+        setGirando(false);
+        setVelocidad(0);
+    }
 
     public boolean isGirando() {
         return girando;
@@ -18,8 +25,8 @@ public class Rueda {
         this.rpm = rpm;
     }
 
-    public float getVelocidad() {
-        return velocidad;
+    public double getVelocidad() {
+        return calcVelocidad();
     }
     public void setVelocidad(float velocidad) {
         this.velocidad = velocidad;
@@ -32,7 +39,7 @@ public class Rueda {
         this.radio = radio;
     }
 
-    public double calcVelocidad() {
+    private double calcVelocidad() {
         if(this.isGirando()) {
             return ((this.getRpm() * 2*Math.PI)/60) * this.getRadio();
         } else {

@@ -2,6 +2,11 @@ public class Motor {
     private boolean encendido;
     private int rpm;
 
+    public Motor(int rpm) {
+        setEncendido(false);
+        setRpm(rpm);
+    }
+
 	public boolean isEncendido() {
 		return encendido;
 	}
@@ -14,4 +19,11 @@ public class Motor {
 	public void setRpm(int rpm) {
 		this.rpm = rpm;
 	}
+
+    public void encender() {
+        setEncendido(true);
+    }
+    public void apagar() {
+        setEncendido(false);
+    }
 }
