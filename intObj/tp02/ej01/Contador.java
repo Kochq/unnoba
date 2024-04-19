@@ -1,4 +1,4 @@
-package tp02;
+ 
 
 public class Contador {
     private int contador;

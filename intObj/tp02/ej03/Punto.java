@@ -1,4 +1,4 @@
-package tp02;
+ 
 
 public class Punto {
     private float x;
@@ -26,9 +26,9 @@ public class Punto {
 		return y;
 	}
 
-	public void setY(float y) {
+    public void setY(float y) {
 		this.y = y;
-	}
+    }
 
     public void sumarValor(float valor) {
         setX(getX() + valor);
