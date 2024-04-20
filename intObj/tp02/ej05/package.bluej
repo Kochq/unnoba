@@ -1,18 +1,18 @@
 #BlueJ package file
-dependency1.from=Ruedas
-dependency1.to=Rueda
+dependency1.from=Auto
+dependency1.to=Ruedas
 dependency1.type=UsesDependency
 dependency2.from=Auto
-dependency2.to=Ruedas
+dependency2.to=Luces
 dependency2.type=UsesDependency
 dependency3.from=Auto
-dependency3.to=Luces
+dependency3.to=Baul
 dependency3.type=UsesDependency
 dependency4.from=Auto
-dependency4.to=Baul
+dependency4.to=Motor
 dependency4.type=UsesDependency
-dependency5.from=Auto
-dependency5.to=Motor
+dependency5.from=Ruedas
+dependency5.to=Rueda
 dependency5.type=UsesDependency
 editor.fx.0.height=0
 editor.fx.0.width=0
