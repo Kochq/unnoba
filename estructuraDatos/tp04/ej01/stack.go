@@ -9,6 +9,7 @@ type Node struct {
 
 type Stack struct {
     top *Node
+    len int
 }
 
 func (stack *Stack) pushStack(value int) {
@@ -20,6 +21,8 @@ func (stack *Stack) pushStack(value int) {
         tNode.next = stack.top
         stack.top = tNode
     }
+
+    stack.len++
 }
 
 func (stack *Stack) popStack() {
@@ -28,10 +31,16 @@ func (stack *Stack) popStack() {
     }
 
     stack.top = stack.top.next
+
+    stack.len--
+}
+
+func (stack *Stack) length() int {
+    return stack.len
 }
 
 func main() {
-    stack := Stack{}
+    stack := Stack{len:0}
 
     stack.pushStack(1)
     stack.pushStack(2)
@@ -40,6 +49,7 @@ func main() {
 
     fmt.Println("Poping...")
     for stack.top != nil {
+        fmt.Printf("queue length %d\n", stack.length())
         fmt.Println("Popped:", stack.top.value)
         stack.popStack()
     }

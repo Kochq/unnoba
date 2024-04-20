@@ -10,6 +10,7 @@ type Node struct {
 type Queue struct {
     top *Node
     bot *Node
+    len int
 }
 
 func (queue *Queue) pushQueue(value int) {
@@ -22,6 +23,8 @@ func (queue *Queue) pushQueue(value int) {
         queue.bot.next = tNode
         queue.bot = tNode
     }
+
+    queue.len++
 }
 
 func (queue *Queue) popQueue() {
@@ -34,10 +37,16 @@ func (queue *Queue) popQueue() {
     if(queue.top == nil) {
         queue.bot = nil
     }
+
+    queue.len--
+}
+
+func (queue *Queue) length() int {
+    return queue.len
 }
 
 func main() {
-    queue := Queue{}
+    queue := Queue{len:0}
 
     queue.pushQueue(1)
     queue.pushQueue(2)
@@ -46,6 +55,7 @@ func main() {
 
     fmt.Println("Poping...")
     for queue.top != nil {
+        fmt.Printf("queue length %d\n", queue.length())
         fmt.Println("Popped:", queue.top.value)
         queue.popQueue()
     }
