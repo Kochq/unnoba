@@ -44,7 +44,7 @@ func validar(stack *stack.Stack, text string) bool {
         }
     }
 
-    return true
+    return stack.Length() == 0
 }
 
 func main() {
