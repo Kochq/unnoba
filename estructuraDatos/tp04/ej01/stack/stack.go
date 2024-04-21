@@ -2,15 +2,15 @@ package stack
 
 type Node struct {
     next *Node
-    value int
+    value byte
 }
 
 type Stack struct {
     top *Node
-    len int
+    len byte
 }
 
-func (stack *Stack) PushStack(value int) {
+func (stack *Stack) PushStack(value byte) {
     tNode := &Node{value: value}
 
     if(stack.top == nil) {
@@ -23,7 +23,7 @@ func (stack *Stack) PushStack(value int) {
     stack.len++
 }
 
-func (stack *Stack) PopStack() int {
+func (stack *Stack) PopStack() byte {
     if(stack.top == nil) {
         return 0
     }
@@ -36,6 +36,6 @@ func (stack *Stack) PopStack() int {
     return value
 }
 
-func (stack *Stack) Length() int {
+func (stack *Stack) Length() byte {
     return stack.len
 }
