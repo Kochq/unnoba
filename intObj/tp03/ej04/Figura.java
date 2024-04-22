@@ -1,4 +1,4 @@
-public class Figura {
+abstract public class Figura {
 	private String color;
     
     public Figura(String color) {
@@ -11,4 +11,6 @@ public class Figura {
     public void setColor(String color) {
         this.color = color;
     }
+
+    abstract public double getArea();
 }
