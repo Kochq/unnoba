@@ -1,7 +1,7 @@
 public class Foto {
     private String title;
     private static int contador = 0;
-    private int id;
+	private int id;
 
     public Foto() {
         setId(++contador);
@@ -10,6 +10,13 @@ public class Foto {
     public Foto(String title) {
         setTitle(title);
         setId(++contador);
+    }
+
+    public static int getContador() {
+        return contador;
+    }
+    public static void setContador(int contador) {
+        Foto.contador = contador;
     }
 
 	public String getTitle() {

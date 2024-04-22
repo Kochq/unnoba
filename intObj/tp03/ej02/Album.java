@@ -10,6 +10,13 @@ public class Album {
 
     public Album() {}
 
+    public String getNombre() {
+        return nombre;
+    }
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
     public Vector<Foto> getFotos() {
         return fotos;
     }
@@ -21,7 +28,7 @@ public class Album {
         getFotos().addElement(foto);
     }
     public void addFotos(Vector<Foto> fotos) {
-        for (Foto foto : fotos) {
+        for(Foto foto : fotos) {
             this.addFoto(foto);
         }
     }
@@ -43,12 +50,5 @@ public class Album {
 
     public int getCantFotos() {
         return getFotos().size();
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
     }
 }
