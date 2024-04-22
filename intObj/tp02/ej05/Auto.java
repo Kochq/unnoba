@@ -1,5 +1,13 @@
 public class Auto {
-    private double velocidad;
+    private double velocidad
+
+	public String getTraccion() {
+		return traccion;
+	}
+
+	public void setTraccion(String traccion) {
+		this.traccion = traccion;
+	};
     private boolean encendido;
 	private Ruedas ruedas;
     private Luces luces;
