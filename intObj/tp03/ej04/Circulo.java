@@ -16,4 +16,8 @@ public class Circulo extends Figura {
     public double getArea() {
         return getRadio()*getRadio()*Math.PI;        
     }
+
+    public void pintar() {
+        System.out.println("Pintando circulo " + getColor());
+    }
 }

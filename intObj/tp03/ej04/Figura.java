@@ -13,4 +13,6 @@ abstract public class Figura {
     }
 
     abstract public double getArea();
+
+    abstract public void pintar();
 }

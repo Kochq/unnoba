@@ -25,4 +25,8 @@ public class Triangulo extends Figura {
     public double getArea() {
         return (getBase()*getAltura())/2;
     }
+
+    public void pintar() {
+        System.out.println("Pintando triangulo " + getColor());
+    }
 }

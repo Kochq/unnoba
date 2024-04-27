@@ -16,4 +16,8 @@ public class Linea extends Figura {
     public double getArea() {
         return getLargo();
     }
+
+    public void pintar() {
+        System.out.println("Pintando linea " + getColor());
+    }
 }

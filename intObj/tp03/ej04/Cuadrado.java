@@ -16,4 +16,8 @@ public class Cuadrado extends Figura {
     public double getArea() {
         return Math.pow(getLado(), 2);
     }
+
+    public void pintar() {
+        System.out.println("Pintando cuadrado " + getColor());
+    }
 }
