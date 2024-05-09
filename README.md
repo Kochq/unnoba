@@ -15,3 +15,8 @@ Repositorio con todo el codigo escrito para la carrera de ***Ingenieria Informat
     * [Tp1 (Memoria)](arquitectura2/tp1) | [Tp2 (Interrupciones)](arquitectura2/tp2) | [Tp3 (PIC)](arquitectura2/tp3) | [Tp4 (Circuitos)](arquitectura2/tp4)
   * [Programación imperativa (C++)](pi)
     * [Tp1 (C++)](pi/unidad1/tp1) | [Tp2 (Matrices/Structs)](pi/unidad2/tp2) | [Tp3 (Listas Enlazadas)](pi/unidad3/tp3) | [Tp4 (Recursividad)](pi/unidad4/tp4)
+* 2do Año | 1er Cuatrimestre
+  * [Estructura de datos (Go)](estructuraDatos)
+    * [Tp2 (Recursion)](estructuraDatos/tp02) | [Tp4 (Implementacion TADs)](estructuraDatos/tp04) | [Tp3 (PIC)](arquitectura2/tp3)
+  * [Introduccion a objetos (Java)](intObj)
+    * [Tp2 (Clases y Objetos)](intObj/tp02) | [Tp3 (Herencia/Coleciones)](intObj/tp03) | [Tp4 (Metodos template/Pseudo variables)](intObj/tp04)
