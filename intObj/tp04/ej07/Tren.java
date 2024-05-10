@@ -62,6 +62,10 @@ public class Tren {
     }
 
     public double velocidadMaxima() {
-        return this.getLocomotora().calcularVelocidad(this.getVagones());
+        for(Vagon vagon : this.getVagones()) {
+            this.getLocomotora().calcularVelocidad(vagon);
+        }
+
+        return this.getLocomotora().getVelocidadMax();
     }
 }

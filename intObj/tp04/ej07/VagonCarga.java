@@ -18,4 +18,8 @@ public class VagonCarga extends Vagon {
     public double calcularPeso() {
         return this.getPeso() + this.getPesoCarga();
     }
+
+    public int cantidadDePasajeros() {
+        return 0;
+    }
 }

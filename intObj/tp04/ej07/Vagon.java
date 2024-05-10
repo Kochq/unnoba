@@ -22,7 +22,5 @@ abstract public class Vagon {
 	}
 
     abstract public double calcularPeso();
-    public int cantidadDePasajeros() {
-        return 0;
-    }
+    abstract public int cantidadDePasajeros(); // No es return 0 por defecto por si creas clases raras
 }

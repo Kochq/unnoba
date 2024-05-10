@@ -1,5 +1,18 @@
 public class LocomotoraFuel extends Locomotora {
-    public LocomotoraFuel(double peso, double potenciaMax, double velocidadMax) {
-        super(15, peso, potenciaMax, velocidadMax);
+    static private int consumo;
+
+	public LocomotoraFuel(double peso, double potenciaMax, double velocidadMax) {
+        super(peso, potenciaMax, velocidadMax);
+    }
+
+    public static int getConsumo() {
+		return consumo;
+	}
+	public static void setConsumo(int consumo) {
+		LocomotoraFuel.consumo = consumo;
+	}
+
+    public double cantidadDeLitrosNecesarios(int km) {
+        return LocomotoraFuel.getConsumo() * km;
     }
 }
