@@ -1,6 +1,4 @@
 abstract public class Pan {
-    private int porcentajeGrano;
-
     public Pan() {
         this.comprobarTemperatura();
         this.prepararAguaConSal();
@@ -11,13 +9,6 @@ abstract public class Pan {
         this.dejarReposar();
         this.cortarMasa();
         this.llevarAlHorno();
-    }
-
-    public int getPorcentajeGrano() {
-        return porcentajeGrano;
-    }
-    public void setPorcentajeGrano(int porcentajeGrano) {
-        this.porcentajeGrano = porcentajeGrano;
     }
 
     abstract public void detallePan();
@@ -48,17 +39,5 @@ abstract public class Pan {
     }
     public void llevarAlHorno() {
         System.out.println("Llevando al horno");
-    }
-
-    public void hacerPan() {
-        comprobarTemperatura();
-        prepararAguaConSal();
-        prepararLevadura();
-        anadirAguaYMezclar();
-        anadirHarinaYRemover();
-        amasar();
-        dejarReposar();
-        cortarMasa();
-        llevarAlHorno();
     }
 }
