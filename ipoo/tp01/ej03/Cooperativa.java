@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Cooperativa {
     private ArrayList<Chofer> choferes = new ArrayList<Chofer>();
@@ -15,7 +16,9 @@ public class Cooperativa {
         for (Chofer c : choferes) {
             if (c.getColectivo().getCantPasajeros() >= cantPasajeros) {
                 c.getColectivo().setKm(c.getColectivo().getKm() + cantKmts);
+                c.getColectivo().setUltimoViaje(new Date());
                 chofer = c;
+                break;
             }
         }
         return chofer;

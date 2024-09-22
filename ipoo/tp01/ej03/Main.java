@@ -5,7 +5,7 @@ public class Main {
         Colectivo colectivo = new Colectivo(50, 1000, "Mercedes Benz", "ABC123");
         Chofer chofer = new Chofer("Juan", colectivo);
 
-        Colectivo colectivo2 = new Colectivo(40, 2000, "Scania", "DEF456");
+        Colectivo colectivo2 = new Colectivo(400, 2000, "Scania", "DEF456");
         Chofer chofer2 = new Chofer("Pedro", colectivo2);
 
         Colectivo colectivo3 = new Colectivo(30, 3000, "Volvo", "GHI789");
@@ -19,5 +19,11 @@ public class Main {
 
         Chofer choferViaje = cooperativa.realizarViaje(45, 500);
         System.out.println("Chofer que realizó el viaje: " + choferViaje.getNombre());
+
+        cooperativa.realizarViaje(355, 500);
+        System.out.println(chofer.millas());
+        System.out.println(colectivo2.millas());
+        System.out.println(colectivo2.ultimoViaje());
+        System.out.println(chofer2.ultimoViaje());
     }
 }

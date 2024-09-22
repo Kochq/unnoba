@@ -1,8 +1,11 @@
-public class Colectivo {
+import java.util.Date;
+
+public class Colectivo implements Frecuencia {
     private int cantPasajeros;
     private float km;
     private String modelo;
     private String patente;
+    private Date ultimoViaje;
 
     public Colectivo(int cantPasajeros, float km, String modelo, String patente) {
         this.setCantPasajeros(cantPasajeros);
@@ -37,5 +40,22 @@ public class Colectivo {
 	}
 	public void setPatente(String patente) {
 		this.patente = patente;
+	}
+
+    public Date getUltimoViaje() {
+		return ultimoViaje;
+	}
+	public void setUltimoViaje(Date ultimoViaje) {
+		this.ultimoViaje = ultimoViaje;
+	}
+
+	@Override
+	public int millas() {
+        return (int) (this.getKm() * 0.621371);
+	}
+
+	@Override
+	public java.util.Date ultimoViaje() {
+        return this.getUltimoViaje();
 	}
 }
