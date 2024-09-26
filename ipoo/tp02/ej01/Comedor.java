@@ -1,3 +1,5 @@
+package tp02.ej01;
+
 import java.util.ArrayList;
 
 public class Comedor {

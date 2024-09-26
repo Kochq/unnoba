@@ -3,3 +3,10 @@ a.out
 .vscode
 *.ctxt
 *.class
+.gradle
+.settings
+build
+.classpath
+.project
+bin
+out

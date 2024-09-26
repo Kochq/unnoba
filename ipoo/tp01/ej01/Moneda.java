@@ -1,3 +1,5 @@
+package tp01.ej01;
+
 abstract public class Moneda {
     private double valorConversion;
 

@@ -1,3 +1,5 @@
+package tp02.ej03;
+
 public class HornoPan {
     public Pan hornearPanBlanco() {
         return new PanBlanco();

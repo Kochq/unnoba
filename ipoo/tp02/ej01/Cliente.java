@@ -1,3 +1,5 @@
+package tp02.ej01;
+
 abstract public class Cliente {
     private String nombre;
     private double descuento;

@@ -16,6 +16,22 @@ public class Clima {
     private Date ultimaActualizacion;
     private float visibilidad;
 
+    public Clima(String ciudad, String provincia, String pais, float temp, float tempMin, float tempMax, String escala, float presion, float viento, String direccionViento, float humedad, Date ultimaActualizacion, float visibilidad) {
+        this.setCiudad(ciudad);
+        this.setProvincia(provincia);
+        this.setPais(pais);
+        this.setTemp(temp);
+        this.setTempMin(tempMin);
+        this.setTempMax(tempMax);
+        this.setEscala(escala);
+        this.setPresion(presion);
+        this.setViento(viento);
+        this.setDireccionViento(direccionViento);
+        this.setHumedad(humedad);
+        this.setUltimaActualizacion(ultimaActualizacion);
+        this.setVisibilidad(visibilidad);
+    }
+
 	public String getCiudad() {
 		return ciudad;
 	}

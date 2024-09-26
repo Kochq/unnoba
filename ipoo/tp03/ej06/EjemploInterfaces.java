@@ -1,3 +1,5 @@
+package tp03.ej06;
+
 public class EjemploInterfaces {
     public static void main(String[] args) {
         Bicicleta bicicleta = new Bicicleta();

@@ -1,3 +1,5 @@
+package tp02.ej04;
+
 public class Main {
     public static void main(String[] args) {
         Operacion n1 = new Numero(10);

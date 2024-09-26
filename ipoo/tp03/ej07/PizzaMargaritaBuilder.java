@@ -1,3 +1,5 @@
+package tp03.ej07;
+
 public class PizzaMargaritaBuilder implements PizzaBuilder {
     private Pizza pizza = new Pizza();
 

@@ -1,3 +1,5 @@
+package tp03.ej06;
+
 public class Automovil implements Vehiculo {
     public void acelerar() {
         System.out.println("El automovil acelera");

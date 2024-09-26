@@ -1,3 +1,5 @@
+package tp02.ej03;
+
 abstract public class Pan {
     public Pan() {
         this.comprobarTemperatura();

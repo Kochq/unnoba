@@ -1,3 +1,5 @@
+package tp02.ej04;
+
 public class Multiplicacion extends OperacionComp {
     public Multiplicacion(Operacion opIzq, Operacion opDer) {
         super(opIzq, opDer);

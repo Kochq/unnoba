@@ -1,3 +1,5 @@
+package tp02.ej01;
+
 public class Plato {
     private String nombre;
     private double precio;

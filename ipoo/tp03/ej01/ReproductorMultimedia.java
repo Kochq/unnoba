@@ -1,3 +1,5 @@
+package tp03.ej01;
+
 public class ReproductorMultimedia implements VideoClip {
     public void play() {
         System.out.println("Reproduciendo...");

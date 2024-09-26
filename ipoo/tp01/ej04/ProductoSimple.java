@@ -1,3 +1,5 @@
+package tp01.ej04;
+
 public class ProductoSimple extends Producto {
     private String nombre;
     private String fechaVencimiento;

@@ -1,3 +1,5 @@
+package tp03.ej03;
+
 public class Cuadrado extends Figura {
     private double lado;
 

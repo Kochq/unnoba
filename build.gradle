@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'com.ejemplo'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = '17'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+}
+
+test {
+    useJUnitPlatform()
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['ipoo']
+        }
+    }
+}

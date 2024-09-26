@@ -1,3 +1,5 @@
+package tp01.ej01;
+
 public class Yen extends Moneda {
     public Yen() {
         super.setValorConversion(7);

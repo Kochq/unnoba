@@ -1,3 +1,5 @@
+package tp02.ej04;
+
 public class Suma extends OperacionComp {
     public Suma(Operacion opIzq, Operacion opDer) {
         super(opIzq, opDer);

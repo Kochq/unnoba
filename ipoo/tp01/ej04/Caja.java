@@ -1,3 +1,5 @@
+package tp01.ej04;
+
 import java.util.ArrayList;
 
 public class Caja {

@@ -1,3 +1,5 @@
+package tp03.ej07;
+
 public class Pizza {
     private String tipoMasa;
     private Boolean salsa;
