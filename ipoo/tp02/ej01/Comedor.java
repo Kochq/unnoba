@@ -1,6 +1,7 @@
 package tp02.ej01;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class Comedor {
     private ArrayList<Reserva> reservas;
@@ -51,33 +52,21 @@ public class Comedor {
 
     /* Retorna la cantidad total de todos los platos reservados */
     public int totalPlatosReservados() {
-        int suma = 0;
-        for (Reserva r : this.getReservas()) {
-            suma += r.totalPlatos();
-        }
-
-        return suma;
+        return this.getReservas().stream().mapToInt(Reserva::totalPlatos).sum();
     }
 
     /* Retorna la suma total de todos los valores platos reservados */
     public double totalValorReservas() {
-        double suma = 0;
-        for (Reserva r : this.getReservas()) {
-            suma += r.valorReserva();
-        }
-
-        return suma;
+        return this.getReservas().stream().mapToDouble(Reserva::valorReserva).sum();
     }
 
     /* Retorna la reserva que tenga más platos reservados */
     public Reserva reservaMasPlatos() {
-        Reserva reservaMuchosPlatos = this.getReservas().get(0);
-        for (Reserva r : this.getReservas()) {
-            if(reservaMuchosPlatos.totalPlatos() < r.totalPlatos()) {
-                reservaMuchosPlatos = r;
+        return this.getReservas().stream().max(new Comparator<Reserva>() {
+            @Override
+            public int compare(Reserva o1, Reserva o2) {
+                return Integer.compare(o1.totalPlatos(), o2.totalPlatos());
             }
-        }
-
-        return reservaMuchosPlatos;
+        }).get();
     }
 }

@@ -18,12 +18,7 @@ public class ReservaMultiple extends Reserva {
 	}
 
 	public double valorReserva() {
-        double suma = 0;
-        for (Plato p : platos) {
-            suma += p.getPrecio() * this.getCliente().getDescuento();
-        }
-
-        return suma * 0.95;
+        return this.getPlatos().stream().mapToDouble(Plato::getPrecio).sum() * 0.95;
 	}
 
     public int totalPlatos() {
