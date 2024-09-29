@@ -1,4 +1,4 @@
-# Comandos
+# Comandos basicos para linux
 
 ## ls: List directory contents
 Lista los directorios del directorio actual `ls`. O del directorio que pases como argumento `ls /path/directory`.
