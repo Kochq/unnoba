@@ -33,7 +33,7 @@ Reemplaza la imagen del proceso actual con una nueva imagen.
 int main() {
     printf("Soy el proceso padre\n");
     char *args[] = {"ls", "-l", NULL};
-    execv("/bin/ls", args);
+    execv("otroPrograma", args); // args: argumentos que necesita el otro programa
     printf("Esta linea no se ejecuta\n");
     return 0;
 }
@@ -41,7 +41,7 @@ int main() {
 
 ##### Salida:
 ```
-Soy el proceso padre
+// Si el otroPrograma tiene salida, se mostrara aqui.
 ```
 
 ## wait: Espera a que un proceso hijo termine.
