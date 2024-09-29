@@ -107,3 +107,27 @@ Cambias al usuario root `sudo su`.
 
 ## sudo: Super User Do
 Ejecuta un comando como root `sudo comando`.
+
+# Otra parte
+
+## Pipes: |
+Permite redirigir la salida de un comando como entrada a otro comando `comando1 | comando2`.
+
+## Redireccion de salida: >
+Redirige la salida de un comando a un archivo `comando > archivo`.
+Tambien podemos usar `>>` para agregar la salida al final del archivo, de esta forma no sobreescribimos el contenido.
+
+# Enlaces
+
+## ln -s: Link simbolico
+Crea un enlace simbolico a un archivo o directorio `ln -s /path/file /path/link`.
+Un enlace simbolico es un acceso directo al archivo o directorio. Si se elimina el archivo o directorio original, el enlace simbolico no va a funcionar.
+
+## ln: Link
+Crea un enlace a un archivo o directorio `ln /path/file /path/link`.
+Un enlace es una copia del archivo o directorio original. Si se elimina el archivo o directorio original, el enlace va a seguir funcionando.
+
+# Red
+
+## ssh: Secure Shell
+Conecta a un servidor remoto `ssh user@host`.
