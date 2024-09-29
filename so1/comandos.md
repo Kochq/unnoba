@@ -1,8 +1,5 @@
 # Comandos basicos para linux
 
-# Index
-* [Section 1](#Otra-parte)
-
 ## ls: List directory contents
 Lista los directorios del directorio actual `ls`. O del directorio que pases como argumento `ls /path/directory`.
     - `-l` Muestra los archivos y directorios en formato largo.
@@ -141,3 +138,11 @@ Tambien se puede copiar archivos locales a un servidor remoto `scp /path/file us
 
 ## telnet: Telnet
 Conecta a un servidor remoto `telnet host port`. Donde host es la direccion ip o el nombre del host, y port es el puerto al que nos conectaremos.
+
+# Ubuntu
+
+## apt: Package manager
+Maneja los paquetes de ubuntu `apt install paquete`, `apt remove paquete`, `apt update`, `apt upgrade`.
+
+## dpkg: Debian package
+Maneja los paquetes de debian `dpkg -i paquete.deb`, `dpkg -r paquete`.
