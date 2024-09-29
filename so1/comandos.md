@@ -1,5 +1,8 @@
 # Comandos basicos para linux
 
+# Index
+* [Section 1](#Otra-parte)
+
 ## ls: List directory contents
 Lista los directorios del directorio actual `ls`. O del directorio que pases como argumento `ls /path/directory`.
     - `-l` Muestra los archivos y directorios en formato largo.
@@ -130,4 +133,11 @@ Un enlace es una copia del archivo o directorio original. Si se elimina el archi
 # Red
 
 ## ssh: Secure Shell
-Conecta a un servidor remoto `ssh user@host`.
+Conecta a un servidor remoto `ssh user@host`. Donde user el el nombre de usuario al que nos conectaremos en el host, y host es la direccion ip o el nombre del host.
+
+## scp: Secure Copy
+Copia archivos de un servidor remoto `scp user@host:/path/file /path/local`.
+Tambien se puede copiar archivos locales a un servidor remoto `scp /path/file user@host:/path/remote`.
+
+## telnet: Telnet
+Conecta a un servidor remoto `telnet host port`. Donde host es la direccion ip o el nombre del host, y port es el puerto al que nos conectaremos.
