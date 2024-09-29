@@ -30,7 +30,6 @@ Es el modo donde vamos a poder ejecutar comandos para guardar, salir, etc. [Ver 
 ## Entrar en visual mode
 - <kbd>v</kbd>: Seleccionar texto.
 - <kbd>V</kbd>: Seleccionar linea.
-- <kbd>Ctrl</kbd> + <kbd>v</kbd>: Seleccionar bloques de texto.
 
 ## Movimiento horizontal
 
@@ -41,22 +40,12 @@ Es el modo donde vamos a poder ejecutar comandos para guardar, salir, etc. [Ver 
 ### Moverse por palabras
 
 - <kbd>w</kbd>: Moverse al principio de la siguiente palabra.
-- <kbd>W</kbd>: Moverse al principio de la siguiente palabra ignorando signos de puntuacion.
 - <kbd>b</kbd>: Moverse al principio de la palabra anterior.
-- <kbd>B</kbd>: Moverse al principio de la palabra anterior ignorando signos de puntuacion.
 - <kbd>e</kbd>: Moverse al final de la palabra.
-- <kbd>E</kbd>: Moverse al final de la palabra ignorando signos de puntuacion.
 
 ### Moverse por caracteres
 - <kbd>f</kbd> + <kbd>caracter</kbd>: Moverse al siguiente caracter.
 - <kbd>F</kbd> + <kbd>caracter</kbd>: Moverse al anterior caracter.
-- <kbd>t</kbd> + <kbd>caracter</kbd>: Moverse al caracter anterior al siguiente.
-- <kbd>T</kbd> + <kbd>caracter</kbd>: Moverse al caracter siguiente al anterior.
-
-### Moverse por la linea
-- <kbd>0</kbd>: Moverse al inicio de la linea.
-- <kbd>-</kbd>: Moverse al primer caracter de la linea.
-- <kbd>$</kbd>: Moverse al final de la linea.
 
 ## Movimiento vertical
 
@@ -67,8 +56,6 @@ Es el modo donde vamos a poder ejecutar comandos para guardar, salir, etc. [Ver 
 ### Moverse por el archivo
 - <kbd>gg</kbd>: Moverse al inicio del archivo.
 - <kbd>G</kbd>: Moverse al final del archivo.
-- <kbd>Ctrl</kbd> + <kbd>d</kbd>: Moverse hacia abajo por la mitad de la pantalla.
-- <kbd>Ctrl</kbd> + <kbd>u</kbd>: Moverse hacia arriba por la mitad de la pantalla.
 
 ### Moverse por parrafos
 - <kbd>}</kbd>: Moverse al final parrafo.
@@ -83,16 +70,10 @@ Es el modo donde vamos a poder ejecutar comandos para guardar, salir, etc. [Ver 
 - <kbd>*</kbd>: Buscar la palabra sobre el cursor.
     - Presionar <kbd>n</kbd> para buscar la siguiente coincidencia. Presionar <kbd>N</kbd> para buscar la anterior coincidencia.
 
-## Reemplazar
-- <kbd>:</kbd> + <kbd>s</kbd>: Reemplazar la palabra actual.
-    - <kbd>g</kbd>: Reemplazar todas las ocurrencias en la linea.
-    - <kbd>c</kbd>: Preguntar antes de reemplazar.
-
 ## Copiar, cortar, pegar (En [Visual Mode](#Entrar-en-visual-mode))
 - <kbd>y</kbd>: Copiar. [Ver copiar](#Yankcopiar)
 - <kbd>d</kbd>: Cortar. [Ver cortar](#Deletecortar)
 - <kbd>p</kbd>: Pegar despues del cursor.
-- <kbd>P</kbd>: Pegar antes del cursor.
 
 ## Cambiar
 - <kbd>c</kbd>: Cambiar. [Ver cambiar](#Changecambiar)
@@ -112,24 +93,18 @@ Es el modo donde vamos a poder ejecutar comandos para guardar, salir, etc. [Ver 
 ## Yank/copiar (En [Normal Mode](#Normal-Mode))
 - <kbd>y</kbd> + <kbd>y</kbd>: Copiar una linea.
 - <kbd>y</kbd> + <kbd>w</kbd>: Copiar una palabra.
-- <kbd>y</kbd> + <kbd>$</kbd>: Copiar hasta el final de la linea.
 - <kbd>y</kbd> + <kbd>a</kbd> + <kbd>p</kbd>: Copiar un parrafo.
-- <kbd>y</kbd> + <kbd>i</kbd> + <kbd>"</kbd>: Copiar entre comillas.
 - <kbd>y</kbd> + <kbd>i</kbd> + <kbd>(</kbd>: Copiar entre parentesis.
-- <kbd>y</kbd> + <kbd>i</kbd> + <kbd>W</kbd>: Copiar desde el " " hasta el " "
 
 ## Delete/cortar (En [Normal Mode](#Normal-Mode))
 - <kbd>d</kbd> + <kbd>d</kbd>: Cortar una linea.
 - <kbd>d</kbd> + <kbd>w</kbd>: Cortar una palabra.
-- <kbd>d</kbd> + <kbd>$</kbd>: Cortar hasta el final de la linea.
 - <kbd>d</kbd> + <kbd>a</kbd> + <kbd>p</kbd>: Cortar un parrafo.
-- <kbd>d</kbd> + <kbd>i</kbd> + <kbd>"</kbd>: Cortar entre comillas.
 - <kbd>d</kbd> + <kbd>i</kbd> + <kbd>(</kbd>: Cortar entre parentesis.
 
 ## Change/cambiar (En [Normal Mode](#Normal-Mode))
 - <kbd>c</kbd> + <kbd>c</kbd>: Cambiar una linea.
 - <kbd>c</kbd> + <kbd>w</kbd>: Cambiar una palabra.
-- <kbd>c</kbd> + <kbd>$</kbd>: Cambiar hasta el final de la linea.
 - <kbd>c</kbd> + <kbd>i</kbd> + <kbd>"</kbd>: Cambiar entre comillas.
 - <kbd>c</kbd> + <kbd>i</kbd> + <kbd>(</kbd>: Cambiar entre parentesis.
 
