@@ -4,25 +4,17 @@
 #include <sys/wait.h>
 
 int main() {
-    pid_t pidP = getpid();
-    pid_t pid1;
-
-    int i = 0;
-    for(; i < 3; i++) {
-        pid1 = fork();
-        if(pid1 == 0) {
-            break;
+    pid_t padrePid = getpid();
+    printf("hola soy el padre %d\n", getpid());
+    for(int i = 0; i < 15; i++) {
+        if(getpid() == padrePid) {
+            pid_t hijo = fork();
+            if(hijo == 0) {
+                printf("hola soy el hijo %d papa %d\n", getpid(), getppid());
+                wait(NULL);
+                exit(0);
+            }
         }
     }
-
-    if(i == 0) {
-        int pid = fork();
-        if(pid == 0) {
-            int pid4 = fork();
-        }
-    }
-
-    printf("PID: %d, mi padre es: %d\n", getpid(), getppid());
-    wait(NULL);
     return 0;
 }
