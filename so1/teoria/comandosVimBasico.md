@@ -90,20 +90,26 @@ Es el modo donde vamos a poder ejecutar comandos para guardar, salir, etc. [Ver 
 
 # Comandos compuestos
 
-## Yank/copiar (En [Normal Mode](#Normal-Mode))
+## Yank/copiar
+(En [Normal Mode](#Normal-Mode))
 - <kbd>y</kbd> + <kbd>y</kbd>: Copiar una linea.
+    - Cuando pegue la linea, se pegara debajo del cursor (Con p) o arriba del cursor (Con P).
 - <kbd>y</kbd> + <kbd>w</kbd>: Copiar una palabra.
 - <kbd>y</kbd> + <kbd>a</kbd> + <kbd>p</kbd>: Copiar un parrafo.
 - <kbd>y</kbd> + <kbd>i</kbd> + <kbd>(</kbd>: Copiar entre parentesis.
 
-## Delete/cortar (En [Normal Mode](#Normal-Mode))
+## Delete/cortar
+(En [Normal Mode](#Normal-Mode))
 - <kbd>d</kbd> + <kbd>d</kbd>: Cortar una linea.
+    - Cuando pegue la linea, se pegara debajo del cursor (Con p) o arriba del cursor (Con P).
 - <kbd>d</kbd> + <kbd>w</kbd>: Cortar una palabra.
 - <kbd>d</kbd> + <kbd>a</kbd> + <kbd>p</kbd>: Cortar un parrafo.
 - <kbd>d</kbd> + <kbd>i</kbd> + <kbd>(</kbd>: Cortar entre parentesis.
 
-## Change/cambiar (En [Normal Mode](#Normal-Mode))
+## Change/cambiar
+(En [Normal Mode](#Normal-Mode))
 - <kbd>c</kbd> + <kbd>c</kbd>: Cambiar una linea.
+    - Cuando pegue la linea, se pegara debajo del cursor (Con p) o arriba del cursor (Con P).
 - <kbd>c</kbd> + <kbd>w</kbd>: Cambiar una palabra.
 - <kbd>c</kbd> + <kbd>i</kbd> + <kbd>"</kbd>: Cambiar entre comillas.
 - <kbd>c</kbd> + <kbd>i</kbd> + <kbd>(</kbd>: Cambiar entre parentesis.
