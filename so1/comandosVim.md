@@ -2,7 +2,7 @@
 
 ## Normal Mode
 Es el modo donde vamos a poder ejecutar comandos para movernos por el archivo, buscar, reemplazar, etc.
-- Entrar: <kbd>ESC</kbd>
+- Entrar: <kbd>ESC</kbd> o <kbd>Ctrl</kbd> + <kbd>c</kbd>
 
 ## Insert Mode
 Es el modo donde vamos a poder escribir en el archivo, como en cualquier otro editor
@@ -13,7 +13,7 @@ Es el modo donde vamos a poder seleccionar texto para copiar, cortar, pegar, etc
 - Entrar: [Ver visual](#Entrar-en-visual-mode)
 
 ## Command mode (?)
-Es el modo donde vamos a poder ejecutar comandos para guardar, salir, etc. [Ver comandos](#Guardar,-salir)
+Es el modo donde vamos a poder ejecutar comandos para guardar, salir, etc. [Ver comandos](#Guardar-salir)
 - Entrar: <kbd>:</kbd>
 
 
@@ -89,13 +89,13 @@ Es el modo donde vamos a poder ejecutar comandos para guardar, salir, etc. [Ver 
     - <kbd>c</kbd>: Preguntar antes de reemplazar.
 
 ## Copiar, cortar, pegar
-- <kbd>y</kbd>: Copiar. [Ver copiar](#Yank/copiar)
-- <kbd>d</kbd>: Cortar. [Ver cortar](#Delete/cortar)
+- <kbd>y</kbd>: Copiar. [Ver copiar](#Yankcopiar)
+- <kbd>d</kbd>: Cortar. [Ver cortar](#Deletecortar)
 - <kbd>p</kbd>: Pegar despues del cursor.
 - <kbd>P</kbd>: Pegar antes del cursor.
 
 ## Cambiar
-- <kbd>c</kbd>: Cambiar. [Ver cambiar](#Change/cambiar)
+- <kbd>c</kbd>: Cambiar. [Ver cambiar](#Changecambiar)
 
 ## Undo, Redo
 - <kbd>u</kbd>: Deshacer. <kbd>Ctrl</kbd> + <kbd>z</kbd>
