@@ -1,22 +1,20 @@
+#include <stdio.h>
+#include <unistd.h>
 #include <sys/wait.h>
 
 int main() {
-    pid_t pidP = getpid();
-    pid_t pid1;
 
-    int i = 0;
-    for(; i < 3; i++) {
-        pid1 = fork();
-        if(pid1 == 0) {
+    for(int i = 0; i < 3; i++) {
+        if(fork() == 0) {
+            if(i == 0) {
+                if(fork() == 0) {
+                    fork();
+                }
+            }
             break;
         }
     }
-    if(i == 0) {
-        int pid = fork();
-        if(pid == 0) {
-            int pid4 = fork();
-        }
-    }
+
 
     printf("PID: %d, mi padre es: %d\n", getpid(), getppid());
     wait(NULL);
