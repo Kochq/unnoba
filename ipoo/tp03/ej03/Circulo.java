@@ -1,5 +1,3 @@
-package tp03.ej03;
-
 public class Circulo extends Figura {
     private double radio;
 

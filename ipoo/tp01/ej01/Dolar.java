@@ -1,5 +1,3 @@
-package tp01.ej01;
-
 public class Dolar extends Moneda {
     public Dolar() {
         super.setValorConversion(1500);

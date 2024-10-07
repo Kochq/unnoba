@@ -1,5 +1,3 @@
-package tp03.ej10;
-
 abstract public class Figura implements FiguraGeometrica {
     private Punto origen;
     private String nombre;

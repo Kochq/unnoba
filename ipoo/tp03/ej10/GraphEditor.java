@@ -1,5 +1,3 @@
-package tp03.ej10;
-
 import java.util.ArrayList;
 
 public class GraphEditor {

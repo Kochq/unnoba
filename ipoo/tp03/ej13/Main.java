@@ -1,5 +1,3 @@
-package tp03.ej13;
-
 import java.util.List;
 import java.util.Arrays;
 import java.util.ArrayList;

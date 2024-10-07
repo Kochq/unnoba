@@ -1,5 +1,3 @@
-package tp03.ej10;
-
 public class Rectangulo extends Figura {
     private double base;
 	private double altura;

@@ -1,5 +1,3 @@
-package tp03.ej10;
-
 public class Main {
     public static void main(String[] args) {
         Punto p1 = new Punto(0, 0);

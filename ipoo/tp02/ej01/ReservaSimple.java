@@ -1,5 +1,3 @@
-package tp02.ej01;
-
 public class ReservaSimple extends Reserva {
     private Plato plato;
 

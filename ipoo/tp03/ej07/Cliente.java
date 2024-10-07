@@ -1,5 +1,3 @@
-package tp03.ej07;
-
 public class Cliente {
     public static void main(String[] args) {
         PizzaBuilder builder = new PizzaMargaritaBuilder();

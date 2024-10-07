@@ -1,5 +1,3 @@
-package tp02.ej04;
-
 public class Numero extends Operacion {
     private double numero;
 

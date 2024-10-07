@@ -1,5 +1,3 @@
-package tp02.ej02;
-
 public class Equipo {
     private String nombre;
 

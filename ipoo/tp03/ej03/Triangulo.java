@@ -1,5 +1,3 @@
-package tp03.ej03;
-
 public class Triangulo extends Figura {
     private double lado;
 

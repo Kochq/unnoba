@@ -1,5 +1,3 @@
-package tp01.ej01;
-
 import java.util.Vector;
 
 public class Banco {

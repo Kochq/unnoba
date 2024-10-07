@@ -1,5 +1,3 @@
-package tp03.ej10;
-
 public interface FiguraGeometrica {
     public double area();
     public void mover(int value, Direccion direccion);

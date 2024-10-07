@@ -1,5 +1,3 @@
-package tp02.ej01;
-
 abstract public class Reserva {
     private Cliente cliente;
     private String fecha;

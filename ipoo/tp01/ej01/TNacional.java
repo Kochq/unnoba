@@ -1,5 +1,3 @@
-package tp01.ej01;
-
 public class TNacional extends Transaccion {
     public TNacional(String fecha, Banco bancoDestino, double monto, Cliente clienteOrigen) {
         super(fecha, bancoDestino, monto, clienteOrigen);

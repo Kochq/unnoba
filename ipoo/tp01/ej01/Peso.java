@@ -1,5 +1,3 @@
-package tp01.ej01;
-
 public class Peso extends Moneda {
     public Peso() {
         this.setValorConversion(1);

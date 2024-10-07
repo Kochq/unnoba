@@ -1,5 +1,3 @@
-package tp02.ej03;
-
 public class PanIntegral extends Pan {
     public PanIntegral() {
         super();

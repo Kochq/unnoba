@@ -1,5 +1,3 @@
-package tp01.ej01;
-
 abstract public class Transaccion {
     private String fecha;
     private Banco bancoDestino;

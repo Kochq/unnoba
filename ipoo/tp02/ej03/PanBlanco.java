@@ -1,5 +1,3 @@
-package tp02.ej03;
-
 public class PanBlanco extends Pan {
     public PanBlanco() {
         super();

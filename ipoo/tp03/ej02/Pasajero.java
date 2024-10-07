@@ -1,5 +1,3 @@
-package tp03.ej02;
-
 import java.util.Date;
 
 public class Pasajero implements Frecuencia {

@@ -1,5 +1,3 @@
-package tp02.ej02;
-
 public class Estadio {
     private String nombre;
     private int capacidad;

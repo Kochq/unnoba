@@ -1,5 +1,3 @@
-package tp03.ej10;
-
 public class Punto {
     private int x;
     private int y;

@@ -1,5 +1,3 @@
-package tp02.ej04;
-
 public class Division extends OperacionComp {
     public Division(Operacion opIzq, Operacion opDer) {
         super(opIzq, opDer);

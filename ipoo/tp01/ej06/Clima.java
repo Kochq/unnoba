@@ -1,4 +1,3 @@
-package tp01.ej06;
 import java.util.Date;
 
 public class Clima {

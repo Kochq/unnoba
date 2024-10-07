@@ -1,5 +1,3 @@
-package tp03.ej08;
-
 import java.util.List;
 
 import tp01.ej06.Clima;
