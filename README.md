@@ -20,3 +20,6 @@ Repositorio con todo el codigo escrito para la carrera de ***Ingenieria Informat
     * [Tp2 (Recursion)](estructuraDatos/tp02) | [Tp4 (Implementacion TADs)](estructuraDatos/tp04) | [Tp3 (PIC)](arquitectura2/tp3)
   * [Introduccion a objetos (Java)](intObj)
     * [Tp2 (Clases y Objetos)](intObj/tp02) | [Tp3 (Herencia/Coleciones)](intObj/tp03) | [Tp4 (Metodos template/Pseudo variables)](intObj/tp04)
+* 2do Año | 2doCuatrimestre
+  * [Introduccion a la programación orientada a objetos (Java)](ipoo)
+  * [Sistemas operativos I (C)](so1)
