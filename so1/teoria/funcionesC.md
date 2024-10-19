@@ -39,6 +39,19 @@ int main() {
 }
 ```
 
+## execv: Usandolo para ejecutar ls -l
+```c
+#include <stdio.h>
+#include <unistd.h>
+
+int main() {
+    char* args[] = {"/usr/bin/ls", "-l", NULL};
+    if(fork() == 0) {
+        execv(args[0], args);
+    }
+}
+```
+
 ##### Salida:
 ```
 // Si el otroPrograma tiene salida, se mostrara aqui.
