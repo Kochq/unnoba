@@ -22,4 +22,4 @@ Repositorio con todo el codigo escrito para la carrera de ***Ingenieria Informat
     * [Tp2 (Clases y Objetos)](intObj/tp02) | [Tp3 (Herencia/Coleciones)](intObj/tp03) | [Tp4 (Metodos template/Pseudo variables)](intObj/tp04)
 * 2do Año | 2doCuatrimestre
   * [Introduccion a la programación orientada a objetos (Java)](ipoo)
-  * [Sistemas operativos I (C)](so1)
+  * [Sistemas operativos I (C)](so1) 
